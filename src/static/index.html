@@ -3,43 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mergington High School Activities</title>
+    <title>Mergington High School</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
       <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
+      <nav>
+        <button class="nav-btn active" data-section="activities-page">Extracurricular Activities</button>
+        <button class="nav-btn" data-section="routine-page">Daily Routine</button>
+      </nav>
     </header>
 
-    <main>
-      <section id="activities-container">
-        <h3>Available Activities</h3>
-        <div id="activities-list">
-          <!-- Activities will be loaded here -->
-          <p>Loading activities...</p>
-        </div>
-      </section>
+    <!-- Activities Page -->
+    <div id="activities-page" class="page">
+      <main>
+        <section id="activities-container">
+          <h3>Available Activities</h3>
+          <div id="activities-list">
+            <!-- Activities will be loaded here -->
+            <p>Loading activities...</p>
+          </div>
+        </section>
 
-      <section id="signup-container">
-        <h3>Sign Up for an Activity</h3>
-        <form id="signup-form">
-          <div class="form-group">
-            <label for="email">Student Email:</label>
-            <input type="email" id="email" required placeholder="your-email@mergington.edu" />
+        <section id="signup-container">
+          <h3>Sign Up for an Activity</h3>
+          <form id="signup-form">
+            <div class="form-group">
+              <label for="email">Student Email:</label>
+              <input type="email" id="email" required placeholder="your-email@mergington.edu" />
+            </div>
+            <div class="form-group">
+              <label for="activity">Select Activity:</label>
+              <select id="activity" required>
+                <option value="">-- Select an activity --</option>
+                <!-- Activity options will be loaded here -->
+              </select>
+            </div>
+            <button type="submit">Sign Up</button>
+          </form>
+          <div id="message" class="hidden"></div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Daily Routine Page -->
+    <div id="routine-page" class="page hidden">
+      <main>
+        <section id="routine-container">
+          <h3>My Daily Routine</h3>
+          <div id="routine-list">
+            <p>Loading routine...</p>
           </div>
-          <div class="form-group">
-            <label for="activity">Select Activity:</label>
-            <select id="activity" required>
-              <option value="">-- Select an activity --</option>
-              <!-- Activity options will be loaded here -->
-            </select>
-          </div>
-          <button type="submit">Sign Up</button>
-        </form>
-        <div id="message" class="hidden"></div>
-      </section>
-    </main>
+        </section>
+
+        <section id="add-task-container">
+          <h3>Add a New Task</h3>
+          <form id="add-task-form">
+            <div class="form-group">
+              <label for="task-title">Task Title:</label>
+              <input type="text" id="task-title" required placeholder="e.g. Morning Run" />
+            </div>
+            <div class="form-group">
+              <label for="task-time">Time:</label>
+              <input type="time" id="task-time" required />
+            </div>
+            <div class="form-group">
+              <label for="task-description">Description:</label>
+              <input type="text" id="task-description" placeholder="Optional description" />
+            </div>
+            <button type="submit">Add Task</button>
+          </form>
+          <div id="routine-message" class="hidden"></div>
+        </section>
+      </main>
+    </div>
 
     <footer>
       <p>&copy; 2023 Mergington High School</p>

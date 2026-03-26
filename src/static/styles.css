@@ -28,6 +28,39 @@ header h1 {
   margin-bottom: 10px;
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.nav-btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  padding: 8px 20px;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.nav-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: white;
+}
+
+.nav-btn.active {
+  background-color: white;
+  color: #1a237e;
+  border-color: white;
+}
+
+.page {
+  display: block;
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
@@ -73,6 +106,91 @@ section h3 {
 .activity-card p {
   margin-bottom: 8px;
 }
+
+/* ── Daily Routine ── */
+
+.routine-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  gap: 10px;
+}
+
+.routine-card.completed {
+  opacity: 0.55;
+  background-color: #e8f5e9;
+  border-color: #a5d6a7;
+  text-decoration-line: line-through;
+}
+
+.routine-card-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+
+.routine-time {
+  font-size: 13px;
+  font-weight: bold;
+  color: #1a237e;
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+.routine-card-info h4 {
+  color: #0066cc;
+  margin-bottom: 2px;
+}
+
+.routine-card-info p {
+  font-size: 13px;
+  color: #555;
+}
+
+.routine-card-actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.btn-complete {
+  background-color: #1a237e;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-complete:hover {
+  background-color: #3949ab;
+}
+
+.btn-delete {
+  background-color: #c62828;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-delete:hover {
+  background-color: #e53935;
+}
+
+/* ── Forms ── */
 
 .form-group {
   margin-bottom: 15px;
